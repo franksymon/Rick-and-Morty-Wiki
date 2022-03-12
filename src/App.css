@@ -1,38 +1,197 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
+body{
   background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+img{
+  max-width: 100%;
+  height: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+
+/* ------------------  App ----------------------- */
+
+.banner{
+  background-image: url('https://i.pinimg.com/originals/6e/39/6a/6e396ac75293f741be7b7855ba4968e5.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 250px;
+  background-position: 45% 33%;
+}
+
+h1{
+  text-align: center;
+  font-size: 48px;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-family: "Pangolin",sans-serif
+}
+
+/* ------------------ LocationInfo App ----------------------- */
+
+
+.location-content{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.location-content h2{
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+
+.location-info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.location-info p{
+  padding: .25rem .5rem;
+}
+
+
+/* --- input Locatio --- */
+
+.input-search-location{
+  
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  
+}
+
+.input-search-location input{
+ 
+  background: #443737;
+    box-shadow: 1px 1px 6px rgb(0 0 0 / 50%);
+    border: 0;
+    width: 100%;
+    height: 40px;
+    font-size: 1rem;
+    color: white;
+    padding: 10px;
+    outline: 0;
+  
+}
+
+.input-search-location button{
+  background: #443737;
+  box-shadow: 1px 1px 6px rgb(0 0 0 / 50%);
+  padding: 0 .5rem;
+  color: white;
+}
+
+/* ------------------ Residents App ----------------------- */
+
+#residents h2 {
+  margin: 1.5rem 0;
+  font-size: 28px;
+  font-family: "Pangolin",sans-serif
+}
+
+
+.card-resident{
+  display: flex;
+  margin-bottom: 20px;
+  background: #3d3535;
+  height: 170px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgb(0 0 0 / 20%);
+  max-width: auto;
+}
+
+
+.image-resident img{
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  min-width: 170px;
+  height: 170px;
+}
+
+.info-resident{
+  padding:  .5rem;
+  text-align: left;
+}
+
+.info-resident p{
+  padding: .10rem;
+  font-size: 14px;
+}
+
+.info-resident h4{
+  
+  padding: .25rem;
+}
+
+small{
+  font-size: 10px;
+  color: hsla(0,0%,100%,.4);
+}
+
+/* ------------------ Class Utilitis ----------------------- */
+.container-app{
+  max-width: 580px;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+
+/* ------------------ Querys ----------------------- */
+
+@media screen and (min-width:600px){
+
+  /* ---- LocationInfo App --- */ 
+
+  .location-info{
+    flex-direction: row;
+    justify-content: space-between;
+    
   }
 }
+
+@media screen and (min-width:768px){
+
+  /* ---- LocationInfo App --- */ 
+
+  .card-resident{
+    width: 360px;
+  }
+
+  .wrapper-residents{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+  }
+
+  .container-app{
+    max-width: 768px;
+  }
+}
+
+/* @media screen and (min-width:950px){
+
+  
+
+  .card-resident{
+    width: 360px;
+  }
+
+
+  .container-app{
+    max-width: 768px;
+  }
+
+} */

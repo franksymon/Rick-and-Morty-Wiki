@@ -1,23 +1,16 @@
-import logo from './logo.svg';
+import LocationInfo from './components/LocationInfo';
+//import SearchBox from './components/SearchBox';
+//import ResidentsList from './components/ResidentsList';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='banner'></div>
+      <div>
+        <h1>Rick and Morty Wiki</h1>
+      </div>
+      <LocationInfo/>
     </div>
   );
 }
